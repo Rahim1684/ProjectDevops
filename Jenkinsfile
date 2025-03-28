@@ -72,13 +72,13 @@ pipeline {
 
          success {
 
-            mail to: 'houcemkhlifi.devops@gmail.com'
+            mail to: 'houcemkhlifi.devops@gmail.com',
                 subject: "SUCCESS: Build ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: "L'artefact a été deployer avec succès"
          }
         
          failure {
-              mail to: 'houcemkhlifi.devops@gmail.com'
+              mail to: 'houcemkhlifi.devops@gmail.com',
                 subject: "FAILED: Build ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: "Echec de Deploiement"
 
