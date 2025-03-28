@@ -23,7 +23,9 @@ pipeline {
             
             steps {
               withSonarQubeEnv('sonar-server') {
+                 withEnv(["JAVA_HOME=${ tool 'java' }", "PATH+MAVEN=${tool 'maven'}/bin:${env.JAVA_HOME}/bin"]) {
                 sh 'mvn clean package sonar:sonar'
+                 }
               }
             }
           }
