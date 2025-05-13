@@ -6,7 +6,7 @@ pipeline {
         stage('Clone'){
             steps{
                 //git credentialsId: 'id_gitlab', url: 'https://repo-dev.efi-academy.com/bah/myapp-j2e-g15'
-                checkout SCM
+                checkout scm
             }
         }
         
