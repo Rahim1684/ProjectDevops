@@ -1,0 +1,11 @@
+---
+- name: deploy on tomcat
+  hosts: all
+  become: true
+  remote_user: apx14
+
+  tasks:
+      - name: deploy war
+        copy:
+            src: myapp-g15.war
+            dest: /opt/tomcat/webapps/
