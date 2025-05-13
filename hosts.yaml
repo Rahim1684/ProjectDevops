@@ -1,0 +1,6 @@
+---
+all:
+    children:
+        java_app:
+            hosts:
+                172.16.15.60
