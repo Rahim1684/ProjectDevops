@@ -7,5 +7,5 @@
   tasks:
       - name: deploy war
         copy:
-            src: myapp-g15.war
+            src: target/myapp-g15.war
             dest: /opt/tomcat/webapps/
