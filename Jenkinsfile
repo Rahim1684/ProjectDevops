@@ -21,12 +21,12 @@ pipeline {
             }
         }
 
-  /*      stage('Deploy') {
-            steps {
-                deploy adapters: [tomcat9(credentialsId: 'id_tomcat', path: '', url: 'http://172.16.15.60:8080')], contextPath: null, war: '**/*.war'
-            }
-        }
-*/  
+  //      stage('Deploy') {
+  //          steps {
+  //              deploy adapters: [tomcat9(credentialsId: 'id_tomcat', path: '', url: 'http://172.16.15.60:8080')], contextPath: null, war: '**/*.war'
+  //          }
+  //      }
+  
 
     }
 }
