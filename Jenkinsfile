@@ -19,7 +19,7 @@ pipeline {
 
         stage('Transfer WAR') {
             steps {
-                sh 'scp target/myapp-g15.war root@192.168.122.11:/tmp/'
+                sh 'scp -o StrictHostKeyChecking=no target/myapp-g15.war root@192.168.122.11:/tmp/'
             }
         }
 
