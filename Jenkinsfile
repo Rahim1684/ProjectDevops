@@ -26,9 +26,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                ssh root@192.168.122.11 << EOF
-                mv /tmp/myapp-g15.war /opt/tomcat/webapps/
-                EOF
+                    ssh -o StrictHostKeyChecking=no root@192.168.122.11 "mv /tmp/myapp-g15.war /opt/tomcat/webapps/"
                 '''
             }
         }
