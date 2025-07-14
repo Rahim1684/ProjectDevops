@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh'scp -o StrictHostKeyChecking=no *.war root@192.168.20.178:/opt/tomcat/webapps'
+                sh'scp -o StrictHostKeyChecking=no target/*.war root@192.168.20.178:/opt/tomcat/webapps'
             }
         }
     }
