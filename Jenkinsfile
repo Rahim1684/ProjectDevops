@@ -9,7 +9,11 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn clean install package'
+                withMaven(globalMavenSettingsConfig: '', jdk: '', maven: 'maven', mavenSettingsConfig: '', traceability: true) {
+                 sh 'mvn clean install package'
+                }
+               
+                
             }
         }
         stage('Deploy') {
